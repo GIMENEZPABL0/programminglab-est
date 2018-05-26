@@ -1,9 +1,9 @@
 /*
-    Gimenez Pablo 6°T
-    T.P. N°1 - Ejercicio N°3
+    Gimenez Pablo 6Â°T
+    T.P. NÂ°1 - Ejercicio NÂ°3
     08/05/2018
 */
-/*
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
@@ -42,7 +42,7 @@ int main(void){
     a *alumnos;
     alumnos = calloc(1,sizeof(a));
 
-        // MENÚ //
+        // MENÃš //
 
     do{
         do{
@@ -246,4 +246,3 @@ void eliminarListado(a *alumnos){
     system("cls");
     return;
 }
-*/
