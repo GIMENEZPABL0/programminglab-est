@@ -1,3 +1,9 @@
+/*
+    Gimenez Pablo 6°T
+    Ejercicio N°1
+    03/04/2018
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 
