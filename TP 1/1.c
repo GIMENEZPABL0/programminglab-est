@@ -1,9 +1,8 @@
 /*
-    Gimenez Pablo 6°T
-    T.P. N°1 - Ejercicio N°1
+    Gimenez Pablo 6Â°T
+    T.P. NÂ°1 - Ejercicio NÂ°1
     08/05/2018
 */
-/*
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -27,7 +26,7 @@ int main(void){
 
     ingresarNotas(alumnos,i);
 
-            // MENÚ //
+            // MENÃš //
 
     do{
         do{
@@ -129,4 +128,3 @@ void editarNota(int v[]){
     system("cls");
     return;
 }
-*/
