@@ -1,7 +1,13 @@
+/*
+    Gimenez Pablo 6¬∞T
+    T.P. N¬∞1 - Ejercicio N¬∞2
+    08/05/2018
+*/
+
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-#define length 41 // TAMA—O M¡XIMO DEL STRING (40 CAR¡CTERES)
+#define length 41 // TAMA√ëO M√ÅXIMO DEL STRING (40 CAR√ÅCTERES)
 
 // VARIABLES GLOBABLES //
 
@@ -25,11 +31,11 @@ int main(void){
 
     char opcion;
 
-    // PUNTERO DIN¡MICO //
+    // PUNTERO DIN√ÅMICO //
 
     alumnos = calloc(1,sizeof(char*));
 
-    // MEN⁄ //
+    // MEN√ö //
 
     do{
         do{
