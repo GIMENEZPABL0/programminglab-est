@@ -85,6 +85,7 @@ void promedio(int v[],int i){
     printf("EL PROMEDIO DE LAS NOTAS ES DE %f\n",subtotal/20);
     return;
 }
+
 void ordenDescendente(int v[],int i,int j){
     system("cls");
     int aux;
