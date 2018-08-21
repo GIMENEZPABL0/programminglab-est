@@ -9,6 +9,6 @@ begin
         write('Deme el numero ',i,': ');
         readLn(num[i]);
         writeln(num[i]);
-        if i > 2 then if array[i] < array[i-1] then halt(0);
+        if i > 1 then if num[i] < num[i-1] then halt(0);
     end;
 end.
