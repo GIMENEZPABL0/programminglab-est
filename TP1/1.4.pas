@@ -1,8 +1,8 @@
-PROGRAM four;
-VAR x,y,potencia:REAL;
-BEGIN
-  WRITE ('Introduce el numero a potenciar: '); Read (x);
-  WRITE ('Introduce el exponente: '); Read (y);
+program four;
+var x,y,potencia:REAL;
+begin
+  write ('Introduce el numero a potenciar: '); read ( x );
+  write ('Introduce el exponente: '); read ( y );
   potencia:=Exp(y*Ln(x));
-  Writeln ('El resultado de la potencia es: ',potencia:20:2);
-END.
+  writeln ('El resultado de la potencia es: ',potencia:20:2);
+end.

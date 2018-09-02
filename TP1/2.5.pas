@@ -1,16 +1,22 @@
-program nine;
+program eleven;
+uses SysUtils;
 var
-  numero:string;
-  digito:longint;
-  i,l:integer;
+  bin : string;
+  i,cont,dec : integer;
 
-  begin
-  writeln ('introdzca un numero en binario');
-  readln (numero);
-  l:=length (numero);
-  for i:=1 to l do
-  if (numero[i]='1') then
-  digito:=digito+ power (2,(l-i));
-  writeln ('el numero en decimal es ',digito);
-  readln;
-  end.
+begin
+  cont := 0;
+  dec := 0;
+
+  write ('Ingrese el número binario de a uno: ');
+  REPEAT begin
+    cont := cont + 1;
+    read (bin[cont]);
+  end until (bin[cont] = '2');
+
+  for i := 1 to (length(bin) - 1) do begin
+    dec := dec * 2 + StrToInt(bin[i]);
+  end;
+
+  writeln(dec);
+end.
