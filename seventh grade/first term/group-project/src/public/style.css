@@ -1,0 +1,11 @@
+body{
+    margin: 20px;
+    background-color: #eee;
+}
+.body{
+    text-align: center;
+    z-index: 999;
+}
+.toast-info {
+    background-color: #3276b1;
+  }

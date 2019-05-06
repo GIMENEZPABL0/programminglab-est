@@ -1,0 +1,69 @@
+ <div id="map">
+  <embed src="world.svg" type="image/svg+xml" id="world" height="500px">
+  </div>
+  <script src="toastr.js"></script>
+    <script type="text/javascript">
+    (function () {
+        toastr.options = {
+        "closeButton": true,
+        "debug": false,
+        "newestOnTop": false,
+        "progressBar": false,
+        "positionClass": "toast-top-right",
+        "preventDuplicates": true,
+        "onclick": null,
+        "showDuration": "0",
+        "hideDuration": "0",
+        "timeOut": "0",
+        "extendedTimeOut": "0",
+        "showEasing": "swing",
+        "hideEasing": "linear",
+        "showMethod": "fadeIn",
+        "hideMethod": "fadeOut"
+        }
+        var info;
+        var world = document.getElementById("world");
+        if (location.protocol == "file:") {
+            var warningDiv = document.createElement("div");
+            warningDiv.style.color = "red";
+            document.body.insertBefore(warningDiv, world);
+            warningDiv.textContent = "Due to restrictions imposed by the " +
+                "same-origin policy, this demo probably won't work when " +
+                "accessed using the file:// URI scheme. If you're having " +
+                "trouble getting it to work, try accessing it over HTTP.";
+        }
+      
+            world.addEventListener("load", function () {
+             var doc = world.getSVGDocument();
+            doc.addEventListener("click", function (e) {
+            var target = e.target;
+            var cc = target.getAttribute("cc")
+            if(!cc && target.parentElement){
+                cc = target.parentElement.getAttribute("cc");
+            }
+            if (cc) {
+                let c = doc.querySelectorAll("[cc]");
+                    for(let j=0;j<c.length;j++){
+                    c[j].style.fill = "white";
+                    }
+                doc.querySelector("[cc="+cc+"]").style.fill = "#4286f4";
+                let a = cc.toUpperCase();
+                console.log(a);
+                fetch('http://localhost:3000/api/'.concat(a), {
+                method: 'GET',
+                headers: {
+                'Accept' : 'application/json',
+                'Content-type' : 'application/json'
+                }
+            })
+            .then(res => res.json())
+            .then(data => info = data.country)
+            .then(() => {
+                toastr["info"]("Animal nacional: "+ info.animal + "</br>Planta nacional: " + info.flower ,info.name);
+            })   
+            }
+        });
+      });
+    }());
+  </script>
+  
